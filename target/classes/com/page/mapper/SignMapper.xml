@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.page.mapper.SignMapper">
+
+	<insert id="joinMember">
+		insert into member (id, pwd) values (#{id}, #{pwd})
+	</insert>
+	
+	<select id="login" resultType="com.page.domain.MemberVO">
+		select id, pwd from member where id = #{id} and pwd = #{pwd}
+	</select>
+	
+	<select id="checkID" resultType="int">
+		select count(*) from member where id=#{id}
+	</select>
+</mapper>
