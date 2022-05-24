@@ -32,7 +32,8 @@
 					</tr>
 					<tr>
 						<th width="30%">작성자</th>
-						<td width="70%"><input type="text" name="id" value="${member.id }" readonly="readonly"></td>
+						<td width="70%">${member.id }</td>
+						<input type="hidden" name="id" value="<c:out values='${member.id}' />">
 					</tr>
 				</table>
 				<p><button type="submit">등록하기</button>

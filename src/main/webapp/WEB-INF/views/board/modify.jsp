@@ -65,7 +65,7 @@
 			<input type="hidden" name="bno" value='<c:out value="${board.bno }" />' >
 			<input type="hidden" name="id" value='<c:out value="${board.id }" />' >
 			<input type="hidden" name="regdate" value='<fmt:formatDate pattern="yyyy/MM/dd" value="${board.regdate }" />' >
-			<input type="hidden" name="updatedate" value='<fmt:formatDate pattern="yyyy/MM/dd" value="${board.regdate }" />' >
+			<input type="hidden" name="updatedate" value='<fmt:formatDate pattern="yyyy/MM/dd" value="${board.updatedate }" />' >
 			
 			<button type="submit" data-oper="modify">수정하기</button>
 			<button type="submit" data-oper="remove">삭제하기</button>
