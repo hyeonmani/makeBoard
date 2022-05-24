@@ -10,16 +10,13 @@ CREATE TABLE board(
     content varchar2(2000),
     regdate date default sysdate,
     updatedate date default sysdate,
+    CONSTRAINT pk_board PRIMARY KEY(bno),
     CONSTRAINT fk_id FOREIGN KEY(id) references member(id) on delete cascade
 );
 
 create sequence board_seq increment by 1 start with 1 minvalue 1;
 
 commit; 
-
---for use index
-alter table board rename constraint SYS_C007003 to pk_board;
-alter index SYS_C007003 rename to pk_board;
 
 -----------------더미용 쿼리문-----------------
 
